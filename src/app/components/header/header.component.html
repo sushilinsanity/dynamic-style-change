@@ -1,0 +1,107 @@
+<nav class="navbar px-5">
+  <div class="navbar-brand">Dynamic Change</div>
+  <div class="ml-auto d-flex">
+    <a class="link" (click)="toggleConfig()">Page Styling</a>
+    <select (change)="useLanguage($event)" class="form-control col-sm-6">
+      <option value="" disabled readonly selected>Select a language</option>
+      <option value="en">English</option>
+      <option value="zh-Hans">Chinese</option>
+      <option value="hi">Hindi</option>
+    </select>
+  </div>
+</nav>
+<div *ngIf="showConfig" class="config-wrapper">
+  <form [formGroup]="configForm">
+    <div class="row px-5">
+      <div class="form-group col-sm-4">
+        <label for="titleSize" class="col-sm-4">Title Size
+          <fa-icon class="info-icon" [icon]="faInfoCircle"
+            popover="size for the title text, only numeric values are allowed" [popoverOnHover]="false"
+            [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="number" class="form-control col-sm-4" formControlName="titleSize">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="titleColor" class="col-sm-4">Title Color
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="choose a color from the color-picker for title text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="color" class="form-control col-sm-4" formControlName="titleColor">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="titleStyle" class="col-sm-4">Title Style
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="specify the style of the title text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <select formControlName="titleStyle" class="form-control col-sm-4">
+          <option value="" disabled readonly>Select a style</option>
+          <option value="bold">Bold</option>
+          <option value="italic">Italic</option>
+          <option value="underline">Underline</option>
+        </select>
+      </div>
+    </div>
+    <div class="row px-5">
+      <div class="form-group col-sm-4">
+        <label for="infoSize" class="col-sm-4">Info Size
+          <fa-icon class="info-icon" [icon]="faInfoCircle"
+            popover="size for the info text, only numeric values are allowed" [popoverOnHover]="false"
+            [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="number" class="form-control col-sm-4" formControlName="infoSize">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="infoColor" class="col-sm-4">Info Color
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="choose a color from the color-picker for info text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="color" class="form-control col-sm-4" formControlName="infoColor">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="infoStyle" class="col-sm-4">Info Style
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="specify the style of the info text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <select formControlName="infoStyle" class="form-control col-sm-4">
+          <option value="" disabled readonly>Select a style</option>
+          <option value="bold">Bold</option>
+          <option value="italic">Italic</option>
+          <option value="underline">Underline</option>
+        </select>
+      </div>
+    </div>
+    <div class="row px-5">
+      <div class="form-group col-sm-4">
+        <label for="bodySize" class="col-sm-4">Body Size
+          <fa-icon class="info-icon" [icon]="faInfoCircle"
+            popover="size for the body text, only numeric values are allowed" [popoverOnHover]="false"
+            [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="number" class="form-control col-sm-4" formControlName="bodySize">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="bodyColor" class="col-sm-4">Body Color
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="choose a color from the color-picker for body text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <input type="color" class="form-control col-sm-4" formControlName="bodyColor">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="bodyStyle" class="col-sm-4">Body Style
+          <fa-icon class="info-icon" [icon]="faInfoCircle" popover="specify the style of the body text"
+            [popoverOnHover]="false" [popoverCloseOnClickOutside]="true"></fa-icon>
+        </label>
+        <select formControlName="bodyStyle" class="form-control col-sm-4">
+          <option value="" disabled readonly>Select a style</option>
+          <option value="bold">Bold</option>
+          <option value="italic">Italic</option>
+          <option value="underline">Underline</option>
+        </select>
+      </div>
+    </div>
+    <div class="buttons-wrapper">
+      <button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+      <button class="btn btn-primary" (click)="changeTheme()">Apply</button>
+    </div>
+  </form>
+</div>
