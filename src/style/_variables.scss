@@ -1,0 +1,43 @@
+// colors
+$color-primary: #6400aa;
+$color-white: #fff;
+$colo-light-grey: #d3d3d3;
+
+// dynamic color variables
+$color-navbar: var(--navbar-color, $color-primary);
+$color-badge: var(--badge-color, $color-primary);
+
+// dynamic font size variables
+$title-color: var(--title-color, #000);
+$info-color: var(--info-color, #000);
+$body-color: var(--body-color, #000);
+
+// sizes
+$size-1x: 1rem;
+$size-2x: 2rem;
+$size-0: 0;
+
+// dynamic font size variables
+$title-size: var(--title-size, 1.5rem);
+$info-size: var(--info-size, 1rem);
+$body-size: var(--body-size, 0.875rem);
+
+// font sizes
+$font-size-small-x: 0.75rem;
+$font-size-small: 0.875rem;
+$font-size-regular: 1rem;
+$font-size-large: 1.25rem;
+$font-size-large-x: 1.5rem;
+
+// dynamic font style variables
+$title-weight: var(--title-weight, "");
+$title-style: var(--title-style, "");
+$title-decoration: var(--title-decoration, "");
+
+$info-weight: var(--info-weight, "");
+$info-style: var(--info-style, "italic");
+$info-decoration: var(--info-decoration, "");
+
+$body-weight: var(--body-weight, "");
+$body-style: var(--body-style, "");
+$body-decoration: var(--body-decoration, "");

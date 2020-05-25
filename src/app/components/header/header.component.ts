@@ -38,9 +38,9 @@ export class HeaderComponent implements OnInit {
 
   changeTheme(): void {
     const configObject = this.configForm.value;
-    configObject['titleSize'] = configObject.titleSize ? `${configObject.titleSize * 0.0625}rem` : configObject.titleSize;
-    configObject['infoSize'] = configObject.infoSize ? `${configObject.infoSize * 0.0625}rem` : configObject.infoSize;
-    configObject['bodySize'] = configObject.bodySize ? `${configObject.bodySize * 0.0625}rem` : configObject.bodySize;
+    configObject['titleSize'] = configObject.titleSize > 0 ? `${configObject.titleSize * 0.0625}rem` : '';
+    configObject['infoSize'] = configObject.infoSize > 0 ? `${configObject.infoSize * 0.0625}rem` : '';
+    configObject['bodySize'] = configObject.bodySize > 0 ? `${configObject.bodySize * 0.0625}rem` : '';
     this.setProperty('--title-size', configObject.titleSize)
     this.setProperty('--info-size', configObject.infoSize);
     this.setProperty('--body-size', configObject.bodySize);
