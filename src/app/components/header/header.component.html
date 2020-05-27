@@ -1,10 +1,12 @@
 <nav class="navbar px-5">
-  <div class="navbar-brand">Dynamic Change</div>
-  <div class="ml-auto d-flex">
+  <div class="col-sm-6 px-0">
+    <div class="navbar-brand">Dynamic Change</div>
+  </div>
+  <div class="col-sm-6 px-0 navbar-options">
     <a class="link" (click)="toggleConfig()">Page Styling</a>
     <select (change)="useLanguage($event)" class="form-control col-sm-6">
-      <option value="" disabled readonly selected>Select a language</option>
-      <option value="en">English</option>
+      <!-- <option value="" disabled readonly selected>Select a language</option> -->
+      <option value="en" selected>English</option>
       <option value="zh-Hans">Chinese</option>
       <option value="hi">Hindi</option>
     </select>

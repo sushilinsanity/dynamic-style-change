@@ -16,20 +16,28 @@
     &:nth-child(1) {
       margin-right: $size-2x;
     }
+
     &:hover {
       border-bottom: 1px solid;
       cursor: pointer;
     }
   }
 
-  select {
-    height: 1.3rem;
-    background-color: $color-primary;
-    border-color: $color-primary;
-    color: $color-white;
-    border-radius: $size-0;
-    padding: $size-0;
-    font-size: $font-size-small;
+  .navbar-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    select {
+      height: 1.3rem;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-white;
+      border-radius: $size-0;
+      padding: $size-0;
+      font-size: $font-size-small;
+      max-width: 100px;
+    }
   }
 }
 
@@ -47,6 +55,7 @@
       padding: $size-0;
       margin: $size-0;
     }
+
     input {
       height: 1.3rem;
       border-radius: $size-0;
@@ -57,6 +66,7 @@
         border-color: $colo-light-grey;
       }
     }
+
     select {
       height: 1.3rem;
       border-radius: $size-0;
@@ -78,6 +88,7 @@
   .title-wrapper {
     display: flex;
     padding: $size-1x $size-0;
+
     &__text {
       color: $title-color;
       font-size: $title-size;
@@ -85,6 +96,7 @@
       font-style: $title-style;
       text-decoration: $title-decoration;
     }
+
     .badge {
       margin-left: 0.5rem;
       height: 1.2rem;
@@ -121,7 +133,8 @@
     background-color: $color-primary;
     border-color: $color-primary;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background-color: darken($color-primary, 5%) !important;
       border-color: darken($color-primary, 5%) !important;
     }
